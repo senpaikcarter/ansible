@@ -12,8 +12,8 @@
         - timeshift
         - thunderbird
         - snapd 
-        - python3-psutil
-        
+        - python3-psutil        
+ 
   - name: copy wallpaper file
     copy: 
       src: files/wallpaper.png
@@ -39,6 +39,13 @@
       dest: /home/kenny/.bashrc
       owner: kenny
       group: kenny
+
+  - name: copy environment for aco compiler
+    copy: 
+      src: files/environment
+      dest: /etc/envirnment
+      owner: root
+      group: root
 
   - name: add ansible user
     user: 
