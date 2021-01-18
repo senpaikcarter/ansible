@@ -12,6 +12,7 @@
         - timeshift
         - thunderbird
         - snapd 
+        - python3-psutil
         
   - name: copy wallpaper file
     copy: 
