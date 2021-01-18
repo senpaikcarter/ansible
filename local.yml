@@ -33,7 +33,6 @@
       owner: kenny
       group: kenny
       mode: 0775
-      recurse: yes
 
   - name: Drive Mountpoint for fstab
     file:
