@@ -26,8 +26,6 @@
         - wget        
         - discord
         - steam
-        - default-jre
-        - default-jdk
 
   - name: 250SSD Mountpoint for fstab
     file: 
