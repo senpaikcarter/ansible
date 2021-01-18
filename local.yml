@@ -27,6 +27,14 @@
         - discord
         - steam
 
+  - name: make mount points for fstab
+    file: 
+      path: /media/test
+      owner: kenny
+      group: kenny
+      mode: 0775
+      recurse: yes
+
   - name: Enable i386 Architecture
     command: dpkg --add-architecture i386
 
