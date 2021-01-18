@@ -27,6 +27,9 @@
         - discord
         - steam
 
+  - name: Enable i386 Architecture
+    command: dpkg --add-architecture i386
+
   - name: copy wallpaper file
     copy: 
       src: files/wallpaper.png
@@ -80,3 +83,11 @@
       minute: "*/10"
       job: ansible-pull -o -U https://github.com/senpaikcarter/ansible.git
     
+  - name: add repositories
+    apt_repository:
+      repo: ppa:kisak/kisak-mesa
+  
+  - name: snap install spotify
+    snap:
+      name: 
+        - spotify
