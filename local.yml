@@ -40,3 +40,23 @@
       owner: kenny
       group: kenny
 
+  - name: add ansible user
+    user: 
+      name: glados
+      system: yes
+
+  - name: set up sudo for ansible user
+    copy: 
+      src: files/sudoer_glados
+      dest: /etc/sudoers.d/glados
+      owner: root
+      group: root
+      mode: 0440
+
+  - name: add ansible-pull cron job
+    cron: 
+      name: ansible auto-provision
+      user: glados
+      minute: "*/10"
+      job: ansible-pull -o -U https://github.com/senpaikcarter/ansible.git
+    
