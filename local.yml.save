@@ -27,7 +27,7 @@
         - discord
         - steam
 
-  - name: 250SSD Mountpoint for fstab
+  - name: 250SSD Mountpoint
     file: 
       path: /media/250SSD
       owner: kenny
@@ -35,15 +35,15 @@
       mode: 0775
       recurse: yes
 
-  - name: Drive Mountpoint for fstab
+  - name: 1tbNVME Mountpoint
     file:
-      path: /media/Drive
+      path: /media/1tbNVME
       owner: kenny
       group: kenny
       mode: 0775
       recurse: yes
 
-  - name: GameNVME Mountpoint for fstab
+  - name: Game NVME Mountpoint
     file:
       path: /media/GameNVME
       owner: kenny
@@ -51,13 +51,7 @@
       mode: 0775
       recurse: yes
 
-  - name: 1tbNVME Mountpoint for fstab
-    file:
-      path: /media/1tbNVME
-      owner: kenny
-      group: kenny
-      mode: 0775
-      recurse: yes
+
 
   - name: Enable i386 Architecture
     command: dpkg --add-architecture i386
