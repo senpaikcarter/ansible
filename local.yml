@@ -4,13 +4,16 @@
   become: true
 
   pre_tasks: 
-    - name: update repositories
-      apt:
-        update_cache: yes
-#        upgrade: yes
-      changed_when: False
+  - name: update repositories
+    apt:
+      update_cache: yes
+#      upgrade: yes
+    changed_when: False
 
   tasks:
+  - name: Enable i386 Architecture
+    command: dpkg --add-architecture i386
+
   - name: install packages
     package: 
       name: 
@@ -26,6 +29,11 @@
         - wget        
         - discord
         - steam
+        - libgl1-mesa-dri:i386
+        - mesa-vulkan-drivers
+        - mlkaesa-vun-drivers:i386
+        - openssh-server
+
 
 #  - name: 250SSD Mountpoint for fstab
 #    file: 
@@ -40,7 +48,6 @@
 #      owner: kenny
 #      group: kenny
 #      mode: 0775
-#      recurse: yes
 
 #  - name: GameNVME Mountpoint for fstab
 #    file:
@@ -48,7 +55,6 @@
 #      owner: kenny
 #      group: kenny
 #      mode: 0775
-#      recurse: yes
 
 #  - name: 1tbNVME Mountpoint for fstab
 #    file:
@@ -56,10 +62,9 @@
 #      owner: kenny
 #      group: kenny
 #      mode: 0775
-#      recurse: yes
 
-  - name: Enable i386 Architecture
-    command: dpkg --add-architecture i386
+#  - name: Enable i386 Architecture
+#    command: dpkg --add-architecture i386
 
   - name: copy wallpaper file
     copy: 
