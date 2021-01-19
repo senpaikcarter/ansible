@@ -4,19 +4,15 @@
   become: true
 
   pre_tasks: 
-<<<<<<< HEAD
   - name: update repositories
     apt:
       update_cache: yes
-#      upgrade: yes
     changed_when: False
-=======
+
     - name: update repositories
       apt:
         update_cache: yes
-#        upgrade: yes
       changed_when: False
->>>>>>> c48563e169bc7dae89f590447309ff83138dbb6c
 
   tasks:
   - name: Enable i386 Architecture
