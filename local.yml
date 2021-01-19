@@ -44,28 +44,24 @@
 #      path: /media/250SSD
 #      owner: kenny
 #      group: kenny
-#      mode: 0775
 
 #  - name: Drive Mountpoint for fstab
 #    file:
 #      path: /media/Drive
 #      owner: kenny
 #      group: kenny
-#      mode: 0775
 
 #  - name: GameNVME Mountpoint for fstab
 #    file:
 #      path: /media/GameNVME
 #      owner: kenny
 #      group: kenny
-#      mode: 0775
 
 #  - name: 1tbNVME Mountpoint for fstab
 #    file:
 #      path: /media/1tbNVME
 #      owner: kenny
 #      group: kenny
-#      mode: 0775
 
 #  - name: Enable i386 Architecture
 #    command: dpkg --add-architecture i386
