@@ -27,15 +27,12 @@
         - thunderbird
         - snapd 
         - python3-psutil        
-#        - libgl1-mesa-dri:i386
-#        - mesa-vulkan-drivers
-#        - mesa-vulkan-drivers:i386
+        - libgl1-mesa-dri:i386
+        - mesa-vulkan-drivers
+        - mesa-vulkan-drivers:i386
         - wget        
         - discord
         - steam
-#        - libgl1-mesa-dri:i386
-#        - mesa-vulkan-drivers
-#        - mlkaesa-vun-drivers:i386
         - openssh-server
 
 
